@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="page-title">Kalkulator dengan Vue Js</h1>
+  <div class="container">
+    <div id="app" class="calculator">
+      <h3>Masukkan angka pertama:</h3>
+      <input v-model="v1" class="input-field">
+      <br>
+      <h3>Masukkan angka kedua:</h3>
+      <input v-model="v2" class="input-field">
+      <br><br>
+      <button v-on:click="hasil = parseFloat(v1) + parseFloat(v2)" class="operation-button"> + </button>
+      <button v-on:click="hasil = parseFloat(v1) - parseFloat(v2)" class="operation-button"> - </button>
+      <button v-on:click="hasil = parseFloat(v1) * parseFloat(v2)" class="operation-button"> * </button>
+      <button v-on:click="hasil = parseFloat(v1) / parseFloat(v2)" class="operation-button"> / </button>
+
+      <h3 class="result"> = {{ hasil }} </h3>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
